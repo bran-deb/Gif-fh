@@ -6,13 +6,9 @@ const GifExpertApp = () => {
 
     const [categories, setCategories] = useState(['Samurai X'])
 
-    // const handleAdd = () => {
-    //     setCategories(cats => [...categories, 'hunter'])
-    // }
-
     return (
         <>
-            <h2>GifExpertApp</h2>
+            <h2>Gif App</h2>
             <AddCategory setCategories={setCategories} />
             <hr />
 
@@ -23,7 +19,6 @@ const GifExpertApp = () => {
                             key={category}
                             category={category}
                         />
-                        // <li key={category}>{category}</li>
                     ))
                 }
             </ol>

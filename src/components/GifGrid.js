@@ -11,7 +11,7 @@ export const GifGrid = ({ category }) => {
     const [images, setImages] = useState([])
 
     const getGifs = async () => {
-        const url = `https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=i6WreDgXbyKNG06qdfOz08YlRDqCbtUx`
+        const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=10&api_key=i6WreDgXbyKNG06qdfOz08YlRDqCbtUx`
         const resp = await fetch(url)
         const { data } = await resp.json()
 

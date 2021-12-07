@@ -14,7 +14,7 @@ const AddCategory = ({ setCategories }) => {
         //validacion
         if (inputValue.trim().length > 2) {
             //el callback guarda el estado anterior (categories)
-            setCategories(cats => [...cats, inputValue])
+            setCategories(cats => [inputValue, ...cats])
             setInputValue('')
         }
     }
