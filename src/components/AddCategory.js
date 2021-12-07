@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 const AddCategory = ({ setCategories }) => {
 
-    const [inputValue, setInputValue] = useState('Hola Mundo')
+    const [inputValue, setInputValue] = useState('')
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value)
@@ -14,6 +15,7 @@ const AddCategory = ({ setCategories }) => {
         if (inputValue.trim().length > 2) {
             //el callback guarda el estado anterior (categories)
             setCategories(cats => [...cats, inputValue])
+            setInputValue('')
         }
     }
 
@@ -26,6 +28,10 @@ const AddCategory = ({ setCategories }) => {
             />
         </form>
     )
+}
+
+AddCategory.propTypes = {
+    setCategories: PropTypes.func.isRequired
 }
 
 export default AddCategory
