@@ -10,3 +10,27 @@ input {
   font-size: 1.2rem;
   width: 100%;
 }
+
+.card {
+  align-content: center;
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+
+.card img {
+  max-height: 170px;
+}
