@@ -11,7 +11,7 @@ export const AddCategory = ({ setCategories }) => {
     //Enter
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('handleSubmit', inputValue)
+        // console.log('handleSubmit', inputValue)
         //validacion
         if (inputValue.trim().length > 2) {
             //el callback guarda el estado anterior (categories)
