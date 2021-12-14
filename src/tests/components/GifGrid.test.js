@@ -1,4 +1,5 @@
 import React from 'react';
+import '@testing-library/jest-dom'
 import { shallow } from 'enzyme'
 import { GifGrid } from "../../components/GifGrid"
 import { useFetchGifs } from '../../hooks/useFetchGifs';
@@ -37,8 +38,10 @@ describe('Pruebas en <GifGrid/>', () => {
         })
 
         const wrapper = shallow(<GifGrid category={category} />)
-
-        expect(wrapper).toMatchSnapshot()
+        //seleccionamos el parrafo para verificar si existe es false
+        expect(wrapper.find('p').exists()).toBe(false)
+        //seleccionamos el gifgriitem y verificamos que tenga la misma cantidad de elementos que gifs[array]
+        expect(wrapper.find('GifGridItem').length).toBe(gifs.length)
     })
 
 })
